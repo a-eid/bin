@@ -1,0 +1,3 @@
+#! /bin/bash
+cpulimit -l=70 -e=/usr/bin/google-chrome-bin
+
