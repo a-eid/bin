@@ -25,15 +25,20 @@ rm -fr latest.tar.gz wordpress
 
 
 # cd to the new installation dir
-echo "cd to /var/www/html/$1"
+echo "cd to /var/www/html"
 
-cd /var/www/html/$1  
+cd /var/www/html
 
 # setting pemissions 
 
-echo "setting user permissions"
-sudo chown $USER  -R * 
+echo $pwd  
 
+echo "setting user permissions"
+sudo chown $USER  -R $1
+
+cd $1
+
+echo $pwd  
 
 echo "setting apache permissions"
 sudo chown www-data:www-data wp-content 
